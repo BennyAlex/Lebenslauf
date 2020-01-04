@@ -679,7 +679,7 @@
 
         if (zoomLevel >= 1) zoomLevel = 1; // stop zooming when page fits screen
 
-        container.style.transform = "scale(" + zoomLevel + ")";
+        inner_container.style.transform = "scale(" + zoomLevel + ")";
 
         if (zoomLevel < 1) {
           var page = document.getElementById("page");
