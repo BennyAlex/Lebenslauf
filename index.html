@@ -281,9 +281,11 @@
         background-position: -1px -1px;
         background-repeat: no-repeat;
         background-size: 21.05cm;
-        display: flex;
         position: relative;
-        box-shadow: 0 0 0 1px #666, 0px 0px 6px 4px rgba(0, 0, 0, 0.25), 0px 0px 13px 13px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 0 1px #666, 0px 0px 6px 4px rgba(0, 0, 0, 0.25),
+          0px 0px 13px 13px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: flex-end;
       }
 
       #page,
@@ -354,10 +356,9 @@
       #left-bar,
       #right-bar {
         display: inline-block;
-        margin-top: 8.1cm;
         padding: 16px;
         height: 21cm;
-        margin-bottom: -5px;
+        margin-bottom: -0.6cm;
       }
 
       #right-bar h2 {
@@ -483,6 +484,9 @@
       @page {
         size: A4;
         margin: 0;
+        padding: 0;
+        marks: none ;
+        bleed: 0;
       }
 
       @media print {
@@ -511,20 +515,24 @@
         #center,
         #scale-container {
           padding: 0 !important;
+        }
+
+        #page,
+        #center,
+        #scale-container {
           margin: 0 !important;
-          transform: scale(1) !important;
           width: 21cm !important;
           height: 29.7cm !important;
         }
 
+        #scale-container {
+          transform: scale(1) !important;
+        }
+
         #page {
-          margin: 0;
-          border: 0;
-          border-radius: 0;
-          box-shadow: none;
-          page-break-after: auto;
-          width: 21cm !important;
-          height: 29.7cm !important;
+          border-radius: 0 !important;
+          box-shadow: none  !important;
+          page-break-after: auto !important;
         }
 
         a {
